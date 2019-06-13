@@ -1,6 +1,6 @@
 spring:
   cloud:
     config:
-      uri: http://localhost:8191
+      uri: http://localhost:9080
   application:
     name: service-discovery
