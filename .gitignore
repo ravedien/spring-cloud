@@ -22,3 +22,7 @@ someOtherfoler/
 *.rar
 *.tar
 *.zip
+
+*/bin/*
+*/gradle/*
+.metadata*

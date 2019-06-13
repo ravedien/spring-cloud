@@ -1,0 +1,18 @@
+server:
+  port: 8191
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ravedien/config-repo
+          clone-on-start: true
+      fail-fast: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
