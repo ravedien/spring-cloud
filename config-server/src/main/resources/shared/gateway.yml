@@ -41,4 +41,13 @@ zuul:
       path: /inventory/**
       serviceId: kicks-inventory
       stripPrefix: false
-sensitiveHeaders: 
+      sensitiveHeaders: 
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true

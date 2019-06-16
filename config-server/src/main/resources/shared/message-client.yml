@@ -1,0 +1,19 @@
+#Random the server port
+server: 
+  port: 0
+  contextPath: /message-client
+
+#Change Eureka Instance ID to be random
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+#      hystrix.stream, info, health
