@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.0.M3'
+	id 'org.springframework.boot' version '2.1.2.RELEASE'
 	id 'java'
 }
 
@@ -23,17 +23,14 @@ repositories {
 }
 
 ext {
-	set('springCloudVersion', "Hoxton.BUILD-SNAPSHOT")
+	set('springCloudVersion', "Greenwich.RELEASE")
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.cloud:spring-cloud-config-server'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-		exclude group: 'junit', module: 'junit'
-	}
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 dependencyManagement {
