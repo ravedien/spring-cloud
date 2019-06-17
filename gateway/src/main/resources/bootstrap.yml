@@ -1,4 +1,19 @@
 spring:
+  application:
+    name: gateway
   cloud:
     config:
       uri: http://localhost:8180
+      
+zuul:
+  prefix: /api
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  routes:
+    message-client:
+      path: /message/**
+      serviceId: message-client
+      stripPrefix: false
+      sensitiveHeaders:
