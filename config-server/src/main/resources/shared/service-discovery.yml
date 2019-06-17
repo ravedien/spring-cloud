@@ -3,7 +3,7 @@ spring:
     name: service-discovery
     
 server:
-  port: 9081
+  port: 9181
 eureka: 
   instance:
     hostname: localhost
