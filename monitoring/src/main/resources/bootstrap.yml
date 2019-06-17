@@ -3,10 +3,10 @@ spring:
     name: monitoring
   cloud:
     config:
-      uri: http://localhost:9180
+      uri: http://localhost:8180
       
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:9181/eureka/
+      defaultZone: http://localhost:8181/eureka/
   

@@ -1,5 +1,5 @@
 server:
-  port: 9180
+  port: 8180
 spring:  cloud:    config:      server:        native:          search-locations: classpath:/shared  profiles:    active: native
 management:
   endpoints:
