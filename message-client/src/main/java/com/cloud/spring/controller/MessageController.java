@@ -2,19 +2,21 @@ package com.cloud.spring.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cloud.spring.entity.MessageEntity;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
-@ResponseBody
+@RequestMapping("/message")
 public class MessageController {
 
 	@HystrixCommand
 	@GetMapping("/{id}")
-	public String getMessage(@PathVariable String id) {
-		return "customer: " + id;
+	public MessageEntity getMessage(@PathVariable String id) {
+		MessageEntity message = new MessageEntity();
+		return message;
 	}
 
 }
