@@ -14,8 +14,9 @@ public class MessageController {
 
 	@HystrixCommand
 	@GetMapping("/{id}")
-	public MessageEntity getMessage(@PathVariable String id) {
+	public MessageEntity getMessage(@PathVariable Integer id) {
 		MessageEntity message = new MessageEntity();
+		message.setId(id);
 		return message;
 	}
 
